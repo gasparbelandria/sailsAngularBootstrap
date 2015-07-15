@@ -18,20 +18,21 @@
     "sails-disk": "~0.9.0",
     "then-jade": "1.1.0",
     "mocha-jenkins-reporter": "0.1.9",
-    "mocha": "2.2.5"
+    "mocha": "2.2.5",
+    "istanbul": "0.3.17",
+    "tape": "4.0.0"
   },
   "scripts": {
-    "start": "node app.js",
-    "debug": "node debug app.js"
-  },
+    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
+    "test": "./node_modules/.bin/mocha --recursive -R xunit test/ > test-reports.xml"
+  },  
   "main": "app.js",
   "repository": "",
   "author": "Christopher Martin <cgmartin@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "grunt-contrib-less": "~0.8.3"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive -R xunit test/ > test-reports.xml"
-  }  
+    "grunt-contrib-less": "~0.8.3",
+    "istanbul": "^0.3.17",
+    "tape": "^4.0.0"
+  }
 }
