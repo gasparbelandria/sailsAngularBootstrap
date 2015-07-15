@@ -17,7 +17,8 @@
     "sails": "0.9.16",
     "sails-disk": "~0.9.0",
     "then-jade": "1.1.0",
-    "mocha-jenkins-reporter": "0.1.9"
+    "mocha-jenkins-reporter": "0.1.9",
+    "mocha": "2.2.5"
   },
   "scripts": {
     "start": "node app.js",
