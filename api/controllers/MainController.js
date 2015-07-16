@@ -14,7 +14,7 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
-
+error here
 module.exports = {
     
   
@@ -35,8 +35,6 @@ module.exports = {
     return res.view();
   },
 
-
-  error
 
   /**
    * Overrides for the settings in `config/controllers.js`
