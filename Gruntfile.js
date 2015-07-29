@@ -16,6 +16,20 @@
 
 module.exports = function (grunt) {
 
+  mocha: {
+    report: {
+      options: {
+        run: true,
+        log: true,
+        reporter: 'XUnit',       # note - case-sensitive
+        urls: [
+          'http://localhost:<%= connect.options.port %>/test.html'
+        ]
+      },
+      dest: 'report.xml'
+    }
+  },
+
   /**
    * CSS files to inject in order
    * (uses Grunt-style wildcard/glob/splat expressions)

@@ -20,7 +20,8 @@
     "mocha-jenkins-reporter": "0.1.9",
     "mocha": "2.2.5",
     "istanbul": "0.3.17",
-    "tape": "4.0.0"
+    "tape": "4.0.0",
+    "mocha-jenkins-reporter": "0.1.9"
   },
   "scripts": {
     "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover"
