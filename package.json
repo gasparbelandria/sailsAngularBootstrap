@@ -23,7 +23,7 @@
     "tape": "4.0.0"
   },
   "scripts": {
-    "ci-test": "./node_modules/.bin/mocha --recursive -R xunit api/ > test-reports.xml"
+    "test": "./node_modules/.bin/mocha --recursive -R xunit api/ > test-reports.xml"
   },
   "main": "app.js",
   "repository": "",
