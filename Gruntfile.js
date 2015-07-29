@@ -16,20 +16,6 @@
 
 module.exports = function (grunt) {
 
-  mocha: {
-    report: {
-      options: {
-        run: true,
-        log: true,
-        reporter: 'XUnit',       # note - case-sensitive
-        urls: [
-          'http://localhost:<%= connect.options.port %>/test.html'
-        ]
-      },
-      dest: 'report.xml'
-    }
-  },
-
   /**
    * CSS files to inject in order
    * (uses Grunt-style wildcard/glob/splat expressions)
@@ -397,10 +383,33 @@ module.exports = function (grunt) {
         files: {
           'views/**/*.jade': ['.tmp/public/jst.js']
         }
-      }
+      },
       /************************************
        * Jade linker end
        ************************************/
+
+
+
+      /************************************
+       * Mocha for Jenkins
+       ************************************/
+
+      mocha: {
+        report: {
+          options: {
+            run: true,
+            log: true,
+            reporter: 'XUnit',       # note - case-sensitive
+            urls: [
+              'http://localhost:<%= connect.options.port %>/test.html'
+            ]
+          },
+          dest: 'report.xml'
+        }
+      }
+
+
+
     },
 
     watch: {
