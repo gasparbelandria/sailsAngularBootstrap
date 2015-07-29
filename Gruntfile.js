@@ -399,7 +399,7 @@ module.exports = function (grunt) {
           options: {
             run: true,
             log: true,
-            reporter: 'XUnit',       # note - case-sensitive
+            reporter: 'XUnit',
             urls: [
               'http://localhost:<%= connect.options.port %>/test.html'
             ]
