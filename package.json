@@ -20,18 +20,18 @@
     "mocha-jenkins-reporter": "0.1.9",
     "mocha": "2.2.5",
     "istanbul": "0.3.17",
-    "tape": "4.0.0",
-    "mocha-jenkins-reporter": "0.1.9"
+    "tape": "4.0.0"
   },
   "scripts": {
-    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover"
-  },  
+    "ci-test": "./node_modules/.bin/mocha --recursive -R xunit api/ > test-reports.xml"
+  },
   "main": "app.js",
   "repository": "",
   "author": "Christopher Martin <cgmartin@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "grunt-contrib-less": "~0.8.3",
+    "grunt-mocha-test": "^0.12.7",
     "istanbul": "^0.3.17",
     "tape": "^4.0.0"
   }
